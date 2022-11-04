@@ -1,12 +1,12 @@
-#from IPython.display import clear_output
+# from IPython.display import clear_output
 import random
 
 # Print the Board
 
 board_list = ['#','X','X','X','X','X','X','X','X','X']
 def board(board_list):
-#   clear_output()       FOR JUPITER NOTEBOOKS
-    print("\n"*100)
+#    clear_output()
+    print('\n'*100)
     print('   |   |')
     print(' ' + board_list[7] + ' | ' + board_list[8] + ' | ' + board_list[9])
     print('   |   |')
@@ -96,7 +96,7 @@ print("Hi! Welcome to Tic-Tac-Toe!!")
 while True:
     # Reset the board
     boardlist = [' '] * 10
-    player1_marker, player2_marker = input_given()
+    player1_choice, player2_choice = input_given()
     turn = toss()
     print(turn + ' will go first.')
     
@@ -115,7 +115,7 @@ while True:
             
             board(boardlist)
             position = position_choice(boardlist)
-            feed_input(boardlist, player1_choice, position)
+            feed_input(boardlist,player1_choice, position)
 
             if result(boardlist,player1_choice):
                 board(boardlist)
